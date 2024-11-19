@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://tc4gwb6fff2" path="res://scenes/components/interactable_component.tscn" id="2_lfaku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soni4"]
-size = Vector2(10, 34)
+size = Vector2(10, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hby1"]
 atlas = ExtResource("1_8tg4o")
@@ -97,7 +97,6 @@ script = ExtResource("1_xy3wp")
 [node name="InteractableComponent" parent="." instance=ExtResource("2_lfaku")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_soni4")
 debug_color = Color(0.631373, 0.47451, 0.627451, 0.329412)
 
