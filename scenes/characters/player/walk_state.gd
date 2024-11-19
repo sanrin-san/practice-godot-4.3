@@ -10,20 +10,27 @@ func _on_process(_delta : float) -> void:
 
 func _on_physics_process(_delta : float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()
-		
-	match direction:
-		Vector2.UP:
-			animated_sprite_2d.play("walk_back")
-		Vector2.RIGHT:
-			animated_sprite_2d.play("walk_right")
-		Vector2.DOWN:
-			animated_sprite_2d.play("walk_front")
-		Vector2.LEFT:
-			animated_sprite_2d.play("walk_left")
 
+	# アニメーション更新
 	if direction != Vector2.ZERO:
-		player.player_direction = direction
+		if abs(direction.x) > abs(direction.y):
+			if direction.x > 0:
+				animated_sprite_2d.play("walk_right")
+				player.player_direction = Vector2.RIGHT
+			else:
+				animated_sprite_2d.play("walk_left")
+				player.player_direction = Vector2.LEFT
+		else:
+			if direction.y > 0:
+				animated_sprite_2d.play("walk_front")
+				player.player_direction = Vector2.DOWN
+			else:
+				animated_sprite_2d.play("walk_back")
+				player.player_direction = Vector2.UP
+	else:
+		animated_sprite_2d.stop()
 
+	# プレイヤーの移動更新
 	player.velocity = direction * speed
 	player.move_and_slide()
 
