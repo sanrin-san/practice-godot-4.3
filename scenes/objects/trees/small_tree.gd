@@ -13,9 +13,10 @@ func _ready() -> void:
 
 func on_hurt(hit_damage: int) -> void:
 	damage_component.apply_damage(hit_damage)
-	self.material.set_shader_parameter('shake_intensity', 0.5)
+	material.set_shader_parameter('shake_intensity', 0.5)
+	print(material.get_shader_parameter('shake_intensity'))
 	await get_tree().create_timer(1.0).timeout
-	self.material.set_shader_parameter("shake_intensity", 0.0)
+	material.set_shader_parameter("shake_intensity", 0.0)
 
 func on_max_damage_reached() -> void:
 	await get_tree().create_timer(0.5).timeout

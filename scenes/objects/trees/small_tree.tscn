@@ -2,13 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://c53feni07px7o" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_4nbv8"]
 [ext_resource type="Shader" path="res://scenes/objects/trees/tree_shader.gdshader" id="1_osvmg"]
-[ext_resource type="PackedScene" uid="uid://ks3udaxuyh0p" path="res://scenes/components/hurt_component.tscn" id="2_1p2u1"]
+[ext_resource type="PackedScene" path="res://scenes/components/hurt_component.tscn" id="2_1p2u1"]
 [ext_resource type="Script" path="res://scenes/objects/trees/small_tree.gd" id="2_3v5v5"]
-[ext_resource type="PackedScene" uid="uid://01ea6p3hhxxh" path="res://scenes/components/damage_component.tscn" id="4_258gk"]
+[ext_resource type="PackedScene" path="res://scenes/components/damage_component.tscn" id="4_258gk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_82upc"]
+resource_local_to_scene = true
 shader = ExtResource("1_osvmg")
-shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_intensity = 0.5
 shader_parameter/shake_speed = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xxar"]
