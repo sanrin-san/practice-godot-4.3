@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c72alqeet4c3b" path="res://scenes/characters/player/player.tscn" id="2_wospq"]
 [ext_resource type="PackedScene" uid="uid://rndr13wyqis3" path="res://scenes/ui/game_screen.tscn" id="3_jv7rv"]
 
-[node name="TestSceneTilemap" type="Node2D"]
+[node name="TestSceneGameScreenUI" type="Node2D"]
 
 [node name="GameTileMap" type="Node2D" parent="."]
 
