@@ -412,7 +412,7 @@ autoplay = "idle_front"
 offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_3u00k")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
@@ -449,5 +449,6 @@ hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisi
 [node name="HitComponent" parent="." instance=ExtResource("10_y08hv")]
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_m232y")
 debug_color = Color(0.860568, 0.309346, 0.490285, 0.42)
