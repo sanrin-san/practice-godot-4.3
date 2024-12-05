@@ -43,3 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			animated_sprite_2d.play("chest_open")
 			is_chest_open = true
 			
+			# create some dialogue
+			var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
+			get_tree().current_scene.add_child(balloon)
+			balloon.start(load("dialogue script file here"), dialogue_start_command)
