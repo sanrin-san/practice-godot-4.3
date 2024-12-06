@@ -14,3 +14,12 @@ func add_collectable(collectable_name: String) -> void:
 	
 	# print("total ", collectable_name, ": ",  inventory[collectable_name])
 	inventory_changed.emit()
+
+func remove_collectable(collectable_name: String) -> void:
+	if inventory[collectable_name] == null:
+		inventory[collectable_name] = 0
+	else:
+		if inventory[collectable_name] > 0:
+			inventory[collectable_name] -= 1
+	
+	inventory_changed.emit()
