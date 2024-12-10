@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddfc4akcf1da0" path="res://scenes/characters/cow/cow.tscn" id="4_37khb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_enrup"]
-vertices = PackedVector2Array(151.773, 278.852, 118.258, 264.141, 116.711, 251, 168, 251, 191.68, 276, 168, 220, 120, 220, 120, 123, 174, 123, 174, 187, 200, 187, 200, 123, 254, 123, 254, 220, 190, 220, 190, 251, 280, 251, 309.898, 276.922, 321.898, 149.531, 316.883, 202.82, 280, 115.32, 314.844, 115.062)
+vertices = PackedVector2Array(151.773, 278.852, 118.258, 264.141, 116.711, 251, 168, 251, 191.68, 276, 168, 220, 120, 220, 120, 123, 174, 123, 174, 187, 200, 187, 200, 123, 254, 123, 254, 220, 190, 220, 190, 251, 280, 251, 309.898, 276.922, 321.898, 149.531, 316.883, 202.82, 280, 115.32, 314.844, 115.063)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(10, 13, 14, 9), PackedInt32Array(3, 5, 9, 14, 15), PackedInt32Array(4, 3, 15), PackedInt32Array(4, 15, 16, 17), PackedInt32Array(18, 19, 17, 16, 20, 21)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(106, 105, 105, 237, 109, 271, 150, 289, 192, 286, 319, 287, 326.842, 203.757, 332, 149, 323, 105, 190, 106)])
 source_geometry_mode = 2
@@ -51,7 +51,6 @@ tile_map_data = PackedByteArray("AAAGAAgABgAAAAEAAAAGAAkABgAAAAEAAAAGAAoABgAAAAE
 tile_set = ExtResource("1_isivv")
 
 [node name="Player" parent="." instance=ExtResource("2_mpu23")]
-y_sort_enabled = true
 position = Vector2(83, 143)
 current_tool = 1
 

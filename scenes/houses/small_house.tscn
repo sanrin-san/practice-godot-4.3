@@ -15,5 +15,6 @@ tile_map_data = PackedByteArray("AAAAAPr/AAABAAAAAAABAPr/AAABAAAAAAACAPr/AAABAAA
 tile_set = ExtResource("1_nr45t")
 
 [node name="Furniture" type="TileMapLayer" parent="HouseTilemap"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAP7/AQAAAAUAAAAEAPv/AQACAAEAAAAAAPv/AQADAAIAAAADAPv/AQADAAMAAAAAAP7/AQADAAAAAAA=")
 tile_set = ExtResource("1_nr45t")
