@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://872to4n3q1j0"]
+[gd_scene load_steps=18 format=4 uid="uid://872to4n3q1j0"]
 
+[ext_resource type="PackedScene" uid="uid://car2qmhslx8u5" path="res://scenes/components/save_level_data_component.tscn" id="1_jcnn2"]
 [ext_resource type="TileSet" uid="uid://t22quv3d6d2t" path="res://Tilesets/game_tile_set.tres" id="1_nnhtj"]
 [ext_resource type="PackedScene" uid="uid://do5ia56ecy64g" path="res://scenes/houses/small_house.tscn" id="2_whrna"]
 [ext_resource type="PackedScene" uid="uid://pcpuvkd4es0h" path="res://scenes/houses/medium_house.tscn" id="3_0twt4"]
+[ext_resource type="PackedScene" uid="uid://6k6ltlsih01u" path="res://scenes/components/save_data_component.tscn" id="3_inyjt"]
+[ext_resource type="Resource" uid="uid://clxeugv8x1jid" path="res://resources/tilemap_layer_data_resource.tres" id="4_f6xwq"]
 [ext_resource type="PackedScene" uid="uid://dnb6fajskx0i7" path="res://scenes/houses/large_house.tscn" id="4_jfjm7"]
 [ext_resource type="PackedScene" uid="uid://csbut8i4cjyjj" path="res://scenes/characters/chicken/chicken.tscn" id="5_2nkq1"]
 [ext_resource type="PackedScene" uid="uid://dt4bupfxtd0fk" path="res://scenes/components/field_cursor_component.tscn" id="5_8jaoe"]
@@ -28,6 +31,8 @@ source_geometry_mode = 2
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
 
+[node name="SaveLevelDataComponent" parent="." instance=ExtResource("1_jcnn2")]
+
 [node name="GameTileMap" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -41,6 +46,9 @@ tile_set = ExtResource("1_nnhtj")
 
 [node name="TilledDirt" type="TileMapLayer" parent="GameTileMap"]
 tile_set = ExtResource("1_nnhtj")
+
+[node name="SaveDataComponent" parent="GameTileMap/TilledDirt" instance=ExtResource("3_inyjt")]
+save_data_resource = ExtResource("4_f6xwq")
 
 [node name="Undergrowth" type="TileMapLayer" parent="GameTileMap"]
 tile_map_data = PackedByteArray("AAAIACEABAAFAAEAAAD9/yIABAAFAAEAAAD//xgABAAFAAEAAADz/xwABAAFAAEAAAD5/xMABAAFAAEAAAAHAA4ABAAFAAEAAAARABkABAAFAAEAAAAaABMABAAFAAEAAAAlAB4ABAAFAAEAAAAWACoABAAFAAEAAADy/yYABAAFAAEAAAAzABgABAAFAAEAAAAuAB4ABAAFAAEAAAAyAAwABAAFAAEAAABAABIABAAFAAEAAABFABgABAAFAAEAAABFACQABAAGAAIAAAA+ACQABAAFAAEAAABMABcABAAFAAEAAAAWAB8ABAAFAAEAAAAPAAkABAAFAAEAAAAbACgABAAGAAEAAAAoACQABAAGAAEAAAAjABsABAAGAAEAAAASACEABAAGAAEAAAAEACMABAAGAAEAAAD8/xwABAAGAAEAAAD9/xwABAAGAAEAAADv/yUABAAGAAEAAAD3/ygABAAGAAEAAAAzABIABAAGAAEAAAA6ABwABAAGAAEAAABFACUABAAGAAEAAABJABsABAAGAAEAAABIABMABAAGAAEAAAD+/w0ABAAHAAQAAAAAAA0ABAAHAAQAAAAAAA4ABAAHAAQAAADx/xYABAAHAAQAAAACAC4ABAAIAAQAAAApACwABAAIAAQAAAAtAC0ABAAIAAQAAAAmAA0ABAAIAAQAAABAAAgABAAIAAQAAABMAA0ABAAIAAQAAABMAA4ABAAHAAQAAABNAA0ABAAHAAQAAABNAA4ABAAIAAQAAABSABIABAAIAAQAAABTABIABAAIAAQAAABVACgABAAIAAQAAABPACQABAAHAAQAAAAgAA0ABAAHAAQAAAD7/y8ABAAHAAQAAADr/yAABAAHAAQAAADr/yUABAAHAAQAAAAHACAABAAGAAMAAAAMABYABAAGAAMAAAAKACcABAAGAAMAAAD2/yIABAAGAAMAAAD3/xwABAAGAAMAAAD4/xcABAAGAAMAAADw/yIABAAGAAMAAADy/yQABAAGAAMAAADz/yYABAAGAAMAAAD3/yMABAAGAAMAAAArACQABAAGAAMAAAAyACQABAAGAAMAAAA1ABgABAAGAAMAAAA7ABIABAAGAAMAAAA9ACMABAAGAAMAAABIAB8ABAAGAAMAAABMABQABAAGAAMAAABGACoABAAGAAIAAAA7ACMABAAGAAIAAAA4ACcABAAGAAIAAAA+ACgABAAGAAIAAAA2ACUABAAGAAIAAAA2ACYABAAGAAIAAAAzACYABAAGAAIAAAAiACQABAAGAAIAAAAfACwABAAGAAIAAAAVACMABAAGAAIAAAASACQABAAGAAIAAAAMAB8ABAAGAAIAAAAIACQABAAGAAIAAAAGABoABAAGAAIAAAAHABMABAAGAAIAAAANAA0ABAAGAAIAAAD//xMABAAGAAIAAAD8/xUABAAGAAIAAAD6/yMABAAGAAIAAAD2/ycABAAGAAIAAADz/yoABAAGAAIAAAA=")
